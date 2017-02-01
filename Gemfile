@@ -1,18 +1,18 @@
-ruby '2.2.1'
+ruby '2.3.3'
 source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0'
+gem 'rails', '5.0.1'
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'mysql2', '~> 0.3.18'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem "autoprefixer-rails"
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'typhoeus', '~> 0.7' # HTTP request client
 
-gem 'devise', '~> 3.4' # Authentication
+gem 'devise'#, '~> 3.4' # Authentication
 
 gem 'sidekiq' # Background job processing queue
 gem 'sinatra', :require => nil # Required for sidekiq web UI
@@ -49,7 +49,7 @@ gem 'mina-newrelic', :require => false
 gem 'dotenv-rails'
 
 # Skylight for performance monitoring
-gem 'skylight'
+#gem 'skylight'
 
 # New Relic application monitoring
 gem 'newrelic_rpm'

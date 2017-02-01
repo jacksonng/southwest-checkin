@@ -15,8 +15,10 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2 
+  encoding: utf8 
+  #adapter: postgresql
+  #encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 25
@@ -80,6 +82,6 @@ test:
 #
 production:
   <<: *default
-  database: southwest_checkin_production
+  database: chkmein 
   username: <%= ENV['SOUTHWEST_CHECKIN_DATABASE_USER'] %>
   password: <%= ENV['SOUTHWEST_CHECKIN_DATABASE_PASSWORD'] %>
