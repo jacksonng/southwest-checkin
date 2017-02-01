@@ -13,10 +13,22 @@ Deployment Notes
  - Served via Nginx w/ self-signed SSL cert, using Cloudflare in front
  - Couldn't figure out how to get Nginx/passenger to pick up the .env file so that is why the vars are mirrored in the nginx config.
  
- Config Files
-  - config-templates/chkmein : nginx site config, copy to /etc/nginx/sites-avaliable and link to /etc/nginx/sites-enabled
-  - config-templates/sidekiq.conf & config-templates/workers.conf : upstart scripts for sidekiq workers, copy to /etc/init
+Config Files
+ - config-templates/chkmein : nginx site config, copy to /etc/nginx/sites-avaliable and link to /etc/nginx/sites-enabled
+ - config-templates/sidekiq.conf & config-templates/workers.conf : upstart scripts for sidekiq workers, copy to /etc/init
+ - in /etc/nginx/nginx.conf : add, ```
+http {
 
+	passenger_user chkmein;
+	passenger_group chkmein;
+	passenger_default_user chkmein;
+	passenger_default_group chkmein;
+
+	passenger_root /usr/lib/ruby/vendor_ruby/phusion_passenger/locations.ini;
+	passenger_ruby /home/chkmein/.rbenv/shims/ruby;
+  
+  ...
+} ```
 
 
 ## README
