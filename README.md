@@ -16,7 +16,8 @@ Deployment Notes
 Config Files
  - config-templates/chkmein : nginx site config, copy to /etc/nginx/sites-avaliable and link to /etc/nginx/sites-enabled
  - config-templates/sidekiq.conf & config-templates/workers.conf : upstart scripts for sidekiq workers, copy to /etc/init
- - in /etc/nginx/nginx.conf : add, ```
+ - in /etc/nginx/nginx.conf : add, 
+ ```
 http {
 
 	passenger_user chkmein;
@@ -28,7 +29,8 @@ http {
 	passenger_ruby /home/chkmein/.rbenv/shims/ruby;
   
   ...
-} ```
+} 
+```
 
 
 ## README
