@@ -1,8 +1,25 @@
-# Southwest Checkin 2.0
+# Southwest Checkin 2.0 - Nginx/Passenger/MySQL
 
-[![Build Status](https://travis-ci.org/aortbals/southwest-checkin.svg?branch=master)](https://travis-ci.org/aortbals/southwest-checkin) [![Coverage Status](https://coveralls.io/repos/aortbals/southwest-checkin/badge.svg?branch=master&service=github)](https://coveralls.io/github/aortbals/southwest-checkin?branch=master)
+This branch has the following changes:
+  - switched database to MySQL
+  - upgraded to rails 5 (json support in MySQL)
+  - changes to support Passenger deployment
+  
+Deployment Notes
+ - Deployed on Ubuntu 16.04.1 LTS
+ - Application runs as user `chkmein`
+ - Ruby installed via rbenv
+ - Sidekiq workers spawned via upstart
+ - Served via Nginx w/ self-signed SSL cert, using Cloudflare in front
+ - Couldn't figure out how to get Nginx/passenger to pick up the .env file so that is why the vars are mirrored in the nginx config.
+ 
+ Config Files
+  - config-templates/chkmein : nginx site config, copy to /etc/nginx/sites-avaliable and link to /etc/nginx/sites-enabled
+  - config-templates/sidekiq.conf & config-templates/workers.conf : upstart scripts for sidekiq workers, copy to /etc/init
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+
+## README
 
 Automatically checks in passengers for their Southwest Flight.
 
