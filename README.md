@@ -1,6 +1,9 @@
 # Southwest Checkin 2.0
 
-[![Build Status](https://travis-ci.org/aortbals/southwest-checkin.svg?branch=master)](https://travis-ci.org/aortbals/southwest-checkin) [![Coverage Status](https://coveralls.io/repos/aortbals/southwest-checkin/badge.svg?branch=master&service=github)](https://coveralls.io/github/aortbals/southwest-checkin?branch=master)
+This is a fork of [aortbals/master](https://github.com/aortbals/southwest-checkin).
+
+* This master branch contains changes which allow the app to run wiht the free version of MailGun for email.
+* This [passenger-nginx](https://github.com/echo0101/southwest-checkin/tree/passenger-nginx) branch contains changes for deployment on Nginx using Passenger. Email is handled with a local SMTP server (which could simply relay to Gmail).
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
