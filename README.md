@@ -11,6 +11,7 @@ Deployment Notes
  - Ruby installed via rbenv
  - Sidekiq workers spawned via upstart
  - Served via Nginx w/ self-signed SSL cert, using Cloudflare in front
+ - Email is configured using local postfix to relay mail to gmail
  - Couldn't figure out how to get Nginx/passenger to pick up the .env file so that is why the vars are mirrored in the nginx config.
  
 Config Files
