@@ -3,7 +3,7 @@
 This is a fork of [aortbals/master](https://github.com/aortbals/southwest-checkin).
 
 * This master branch contains changes which allow the app to run wiht the free version of MailGun for email.
-* The [passenger-nginx](https://github.com/echo0101/southwest-checkin/tree/passenger-nginx) branch contains changes for deployment on Nginx using Passenger. Email is handled with a local SMTP server (which could simply relay to Gmail).
+* The [passenger-nginx](https://github.com/echo0101/southwest-checkin/tree/passenger-nginx) branch contains changes for deployment on Nginx using Passenger and MySQL instead of Postgres. Rails version has also been upgraded in this branch for json support in MySQL. Email is handled with a local SMTP server (which could simply relay to Gmail).
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
