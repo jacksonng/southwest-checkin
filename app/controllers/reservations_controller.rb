@@ -67,7 +67,7 @@ class ReservationsController < ApplicationController
     else
       flash[:notice] = 'Start by creating an account to track your reservations.'
       flash[:from_reservations] = true
-      redirect_to new_registration_path(User.new)
+      redirect_to home_path
     end
   end
 
